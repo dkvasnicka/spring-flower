@@ -15,7 +15,7 @@ import net.danielkvasnicka.flower.response.api.Response;
 public class TestWebAccessibleBean extends AbstractWebAccessibleBean {
 	
 	/**
-	 * Shows a primitive text streaming response, that prints 
+	 * Shows a primitive text streaming response that prints the 
 	 * value of one of the REST params
 	 * 
 	 * @return
@@ -26,7 +26,7 @@ public class TestWebAccessibleBean extends AbstractWebAccessibleBean {
 	}
 
 	/**
-	 * And XML streaming response, that prints parameter "y", which is not encoded
+	 * XML streaming response, that prints parameter "y", which is not encoded
 	 * in the URL as a REST param and should be sent through POST or GET.
 	 * This is to demo the functionality od merging REST and POST/GET params.
 	 * 
