@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="flower">
+	
+	<!-- if you want to use Eclipse build tasks, set this to your eclipse path -->
+	<property name="ECLIPSE_HOME" value="../../../../Applications/eclipse"/>
+
+	<!-- we need to include Servlet API in order to build Flower properly -->
+    <path id="Apache Tomcat v6.0 [Apache Tomcat v6.0].libraryclasspath">
+        <pathelement location="../../../../Applications/NetBeans/apache-tomcat-6.0.16/lib/servlet-api.jar"/>
+    </path>
+		
+	<import file="build-eclipse.xml"/>
+	<property name="version" value="0.1" />
+	
+	<!-- download dependencies from Maven repositories -->
+	<target name="dependencies" description="retrieve dependencies with ivy">
+        <ivy:retrieve pattern="WebContent/WEB-INF/lib/[artifact]-[revision].[ext]" />
+	</target>
+	
+	<!-- resolve ALL deps (references just 'dependencies' for now) -->
+	<target name="resolveAllDependencies" depends="dependencies" />
+	
+	<!-- build a JAR -->
+	<target name="buildJar" depends="resolveAllDependencies,build">
+		<jar destfile="target/spring-flower-${version}.jar"
+			basedir="build/classes"
+			excludes="**/.DS_Store,net/danielkvasnicka/flower/test/beans**">
+			
+			<manifest>
+				<attribute name="Implementation-Vendor" value="Daniel Kvasnicka jr."/>
+				<attribute name="Implementation-Title" value="Flower framework (for Spring Java framework)"/>
+				<attribute name="Implementation-Version" value="${version}"/>
+			</manifest>
+		</jar>
+	</target>
+</project>

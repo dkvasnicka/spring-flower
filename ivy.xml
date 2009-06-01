@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+            
+    <info organisation="danielkvasnicka.net" module="flower"/>
+    
+    <dependencies>
+        <dependency org="org.springframework" name="spring-core" rev="2.5.6"/>
+        <dependency org="org.springframework" name="spring-web" rev="2.5.6"/>
+        <dependency org="org.springframework" name="spring-context" rev="2.5.6"/>
+        <dependency org="org.springframework" name="spring-test" rev="2.5.6"/>
+        <dependency org="commons-io" name="commons-io" rev="1.4"/>
+<!--        <dependency org="dom4j" name="dom4j" rev="1.6.1"/>-->
+
+<!--        <dependency org="xalan" name="xalan" rev="2.7.0"/>-->
+<!--        <dependency org="net.sourceforge.stripes" name="stripes" rev="1.5"/>-->
+<!--        <dependency org="org.directwebremoting" name="dwr" rev="2.0.3"/>-->
+<!--        <dependency org="commons-jxpath" name="commons-jxpath" rev="1.3"/>-->
+	
+		<exclude module="spring-webmvc" />        
+		<exclude module="spring-jdbc" />        
+		<exclude module="spring-orm" />        
+		<exclude module="spring-tx" />        
+		<exclude module="persistence-api" />        
+		<exclude module="portlet-api" />
+		<exclude module="aspectjrt" />        
+		<exclude module="aspectjweaver" />        
+        <exclude org="xpp3" />
+        <exclude org="pull-parser" />
+        <exclude org="stax" />
+        <exclude org="msv" />
+        <exclude module="xalan" />
+        <exclude module="jmxtools" />
+        <exclude module="jms" />
+        <exclude module="jmxri" />
+        <exclude module="cos" />
+        <exclude module="ant" />
+        <exclude module="jta" />
+        <exclude module="connector" />
+        <exclude module="jsp-api" />
+        <exclude module="servlet-api" />
+        <exclude module="spring" />
+        <exclude module="ehcache" />
+        <exclude module="jstl" />
+        <exclude module="standard" />
+        <exclude module="quartz" />
+        <exclude module="asm" />
+        <exclude module="asm-commons" />
+        <exclude module="asm-tree" />
+        <exclude module="asm-util" />
+        <exclude module="backport-util-concurrent" />
+        <exclude module="activation" />
+        <exclude module="jsf-api" />
+        <exclude module="axis" />
+        <exclude module="struts" />
+        <exclude module="commonj-twm" />
+        <exclude module="aopalliance" />
+        <exclude module="ejb" />
+        <exclude module="hessian" />
+        <exclude module="hibernate" />
+        <exclude module="asm-attrs" />
+        <exclude module="antlr" />
+        <exclude module="webwork" />
+        <exclude module="xwork" />
+        <exclude module="rife-continuations" />
+        <exclude module="oscore" />
+        <exclude module="junit" />
+        <exclude module="junitperf" />
+        <exclude module="freemarker" />
+        <exclude module="myfaces-api" />
+        <exclude module="cglib" />
+        <exclude module="ognl" />
+        <exclude module="mail" />
+        <exclude module="jaxrpc-api" />
+    </dependencies>
+</ivy-module>
