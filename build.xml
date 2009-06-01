@@ -32,5 +32,19 @@
 				<attribute name="Implementation-Version" value="${version}"/>
 			</manifest>
 		</jar>
+		
+		<antcall target="buildJavaDoc" />
+	</target>
+	
+	<target name="buildJavaDoc">
+		<javadoc sourcepath="src" destdir="javadoc"
+			author="true"
+	        version="true"
+	        use="true"
+	        windowtitle="Flower framework API">
+			
+			<doctitle><![CDATA[<h1>Flower framework API</h1>]]></doctitle>
+			<bottom><![CDATA[<i>Copyright &#169; 2009 Daniel Kvasnička jr. All Rights Reserved.</i>]]></bottom>
+		</javadoc>
 	</target>
 </project>
