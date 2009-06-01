@@ -25,5 +25,6 @@ You need Ivy to build this library (http://ant.apache.org/ivy/). After getting I
 ant -lib /path/to/where/your/ivy/jar/is buildJar
 
 After this you should be also able to import the directory you checked out from the SVN into Eclipse as a Dynamic Web Project and
-run it on a servlet container.
+run it on a servlet container. You will probably have to update the .classpath file (via Eclipse project settings, probably) as
+it contains Mac OS X-specific settings now.
 The project contains two test beans (see Spring app ctx and the "test" src folder).
