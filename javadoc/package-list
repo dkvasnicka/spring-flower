@@ -5,4 +5,5 @@ net.danielkvasnicka.flower.core.api
 net.danielkvasnicka.flower.exception
 net.danielkvasnicka.flower.response
 net.danielkvasnicka.flower.response.api
+net.danielkvasnicka.flower.test.beans
 net.danielkvasnicka.flower.utils
