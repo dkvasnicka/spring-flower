@@ -12,12 +12,15 @@
 	
 	<!-- FLOWER config -->
 	<import resource="classpath:net/danielkvasnicka/flower/core/flowerContext.xml"/>	
-	<bean id="webAccessibleBeanResolver" class="net.danielkvasnicka.flower.core.DefaultWebAccessibleBeanResolver" autowire-candidate="true" />
+	<bean id="webAccessibleBeanResolver" class="net.danielkvasnicka.flower.core.DefaultWebAccessibleBeanResolver" 
+			autowire-candidate="true" />
 	<!-- FLOWER config -->
 	
-	<bean id="firstBean" class="net.danielkvasnicka.flower.test.beans.TestWebAccessibleBean" f:url-mapping="/helloworld/({f_method}[a-zA-Z]+)/({x}\d*)">
+	<bean id="firstBean" class="net.danielkvasnicka.flower.test.beans.TestWebAccessibleBean" 
+				f:url-mapping="/helloworld/({f_method}[a-zA-Z]+)/({x}\d*)">
 	</bean>
 	
-	<bean id="secondBean" class="net.danielkvasnicka.flower.test.beans.CopyOfTestWebAccessibleBean" f:url-mapping="/helloworld/({f_method}[a-zA-Z]+)">
+	<bean id="secondBean" class="net.danielkvasnicka.flower.test.beans.CopyOfTestWebAccessibleBean" 
+				f:url-mapping="/helloworld/({f_method}[a-zA-Z]+)">
 	</bean>
 </beans>
